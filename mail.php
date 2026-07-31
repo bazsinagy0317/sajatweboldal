@@ -130,6 +130,59 @@ if ($valasz === false || $statusz < 200 || $statusz >= 300) {
     ki(['ok' => false, 'error' => 'Az e-mail küldése nem sikerült.'], 502);
 }
 
+/* ── Automatikus visszaigazolás az érdeklődőnek ──
+   Csak akkor megy ki, ha a config.php-ban be van kapcsolva. A hitelesítetlen
+   teszt-feladóval a Resend csak a saját fiók címére enged küldeni, ezért
+   alapértelmezésben ki van kapcsolva. Ha nem sikerül, az érdemi levelet
+   ez már nem befolyásolja. */
+if (!empty($cfg['visszaigazolas'])) {
+    $vhtml = '<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a1a">'
+      . '<p>Kedves ' . $e($nev) . ',</p>'
+      . '<p>köszönöm a megkeresést — az üzenete megérkezett. Munkanapokon <b>24 órán belül</b> válaszolok, '
+      . 'és ha elég információm van hozzá, rögtön küldök egy tételes, fix összegű árajánlatot is.</p>'
+      . '<p>Ez egy automatikus visszaigazolás, nem szükséges rá válaszolni. '
+      . 'Ha időközben eszébe jut valami, nyugodtan írjon erre a levélre.</p>'
+      . '<div style="margin:22px 0 8px;color:#666;font-size:13px">Amit elküldött:</div>'
+      . '<div style="white-space:pre-wrap;background:#f6f5f2;border-left:3px solid #C4471F;padding:14px 16px;font-size:14px">' . $e($uzenet) . '</div>'
+      . '<p style="margin-top:26px">Üdvözlettel:<br><b>Nagy Balázs</b><br>'
+      . '<span style="color:#666;font-size:13px">Weboldal- és webshopfejlesztés · Pécs<br>'
+      . '+36 70 416 4210 · bazsinagy0317@gmail.com</span></p>'
+      . '</div>';
+
+    $vszoveg = "Kedves {$nev},\n\n"
+      . "köszönöm a megkeresést — az üzenete megérkezett. Munkanapokon 24 órán belül válaszolok.\n\n"
+      . "Ez egy automatikus visszaigazolás, nem szükséges rá válaszolni.\n\n"
+      . "Amit elküldött:\n{$uzenet}\n\n"
+      . "Üdvözlettel:\nNagy Balázs\nWeboldal- és webshopfejlesztés, Pécs\n+36 70 416 4210\n";
+
+    $vtorzs = json_encode([
+        'from'     => $cfg['mail_from'],
+        'to'       => [$fejlec($email)],
+        'subject'  => 'Megkaptam az üzenetét — Nagy Balázs',
+        'html'     => $vhtml,
+        'text'     => $vszoveg,
+        'reply_to' => $cfg['mail_to'],
+    ], JSON_UNESCAPED_UNICODE);
+
+    $vch = curl_init('https://api.resend.com/emails');
+    curl_setopt_array($vch, [
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => $vtorzs,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT        => 10,
+        CURLOPT_HTTPHEADER     => [
+            'Authorization: Bearer ' . $cfg['resend_api_key'],
+            'Content-Type: application/json',
+        ],
+    ]);
+    $vvalasz = curl_exec($vch);
+    $vstatusz = (int)curl_getinfo($vch, CURLINFO_HTTP_CODE);
+    curl_close($vch);
+    if ($vvalasz === false || $vstatusz < 200 || $vstatusz >= 300) {
+        error_log('mail.php: a visszaigazolás nem ment ki (' . $vstatusz . ')');
+    }
+}
+
 /* Sikeres küldés rögzítése a sebességkorláthoz */
 $idok[] = $most;
 @file_put_contents($kulcs, implode(',', $idok), LOCK_EX);

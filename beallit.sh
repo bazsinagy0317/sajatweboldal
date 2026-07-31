@@ -3,10 +3,12 @@
 #  Domain beállítása
 #
 #  Használat:
-#      bash beallit.sh a-domainem.hu
+#      bash beallit.sh a-domainem.hu ["Székhely cím"] ["Nyilvántartási szám"]
 #
-#  Ez behelyettesíti a domaint az index.html, robots.txt, sitemap.xml
-#  és config.php fájlokba, és beírja a mai dátumot a sitemapbe.
+#  Ez behelyettesíti a domaint az index.html, adatkezeles.html, robots.txt,
+#  sitemap.xml és config.php fájlokba, beírja a mai dátumot a sitemapbe,
+#  és — ha megadod — kitölti a székhelyet és a nyilvántartási számot
+#  az adatkezelési tájékoztatóban.
 # ─────────────────────────────────────────────────────────────
 set -euo pipefail
 
@@ -30,9 +32,29 @@ csere() {
   echo "  ✓ $1"
 }
 
-for f in index.html robots.txt sitemap.xml config.php; do
+for f in index.html adatkezeles.html 404.html robots.txt sitemap.xml config.php; do
   [ -f "$f" ] && csere "$f"
 done
+
+# ── Székhely és nyilvántartási szám az impresszumba ──
+SED_I() { if sed --version >/dev/null 2>&1; then sed -i "$1" "$2"; else sed -i '' "$1" "$2"; fi }
+
+if [ $# -ge 2 ] && [ -n "${2:-}" ]; then
+  SZEK=$(printf '%s' "$2" | sed 's/[&/\\]/\\&/g')
+  SED_I "s/SZEKHELYCIM/${SZEK}/g" adatkezeles.html
+  echo "  ✓ székhely beírva"
+else
+  echo "  ! FIGYELEM: a székhely helyén még SZEKHELYCIM áll az adatkezeles.html-ben."
+  echo "    Ezt kötelező kitölteni: bash beallit.sh $DOMAIN \"7621 Pécs, Példa utca 1.\" \"12345678\""
+fi
+
+if [ $# -ge 3 ] && [ -n "${3:-}" ]; then
+  NYSZ=$(printf '%s' "$3" | sed 's/[&/\\]/\\&/g')
+  SED_I "s/NYILVSZAM/${NYSZ}/g" adatkezeles.html
+  echo "  ✓ nyilvántartási szám beírva"
+else
+  echo "  ! FIGYELEM: a nyilvántartási szám helyén még NYILVSZAM áll az adatkezeles.html-ben."
+fi
 
 TODAY=$(date +%Y-%m-%d)
 if sed --version >/dev/null 2>&1; then

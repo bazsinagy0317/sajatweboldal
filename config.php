@@ -16,4 +16,15 @@ return [
 
     // Ide érkeznek az űrlapról jövő üzenetek.
     'mail_to' => 'bazsinagy0317@gmail.com',
+
+    // Küldjön-e automatikus visszaigazolást az érdeklődőnek?
+    // Csak akkor működik, ha a feladó domain hitelesítve van a Resendben —
+    // az onboarding@resend.dev teszt címről csak a saját fiókod címére lehet küldeni.
+    'visszaigazolas' => false,
+
+    // ── Süti nélküli látogatottság-mérés ──
+    // true: gyűjti a napi összesítést az adatok/ mappába (IP-t nem tárol)
+    'stat_be' => true,
+    // Jelszó a statisztika.php megnyitásához (felhasználónevet hagyd üresen)
+    'stat_jelszo' => 'IDE_JON_EGY_JELSZO',
 ];
