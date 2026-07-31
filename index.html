@@ -7,22 +7,22 @@
 <meta name="description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak Pécsen. Saját kód, havi platformdíj nélkül, ÁFA-mentes számlával. 190 000 Ft-tól.">
 <meta name="author" content="Nagy Balázs">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://nagybalazsweb.com/">
+<link rel="canonical" href="https://bazsinagy0317.github.io/sajatweboldal/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="hu_HU">
 <meta property="og:site_name" content="Nagy Balázs — Webfejlesztés">
-<meta property="og:url" content="https://nagybalazsweb.com/">
+<meta property="og:url" content="https://bazsinagy0317.github.io/sajatweboldal/">
 <meta property="og:title" content="Weboldal, amit a cégéhez terveznek">
 <meta property="og:description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül. Pécs, Baranya — országosan online.">
-<meta property="og:image" content="https://nagybalazsweb.com/og.png">
+<meta property="og:image" content="https://bazsinagy0317.github.io/sajatweboldal/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Nagy Balázs — egyedi weboldal- és webshopfejlesztés">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Weboldal, amit a cégéhez terveznek">
 <meta name="twitter:description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül.">
-<meta name="twitter:image" content="https://nagybalazsweb.com/og.png">
+<meta name="twitter:image" content="https://bazsinagy0317.github.io/sajatweboldal/og.png">
 
 <meta name="theme-color" content="#141210">
 <meta name="format-detection" content="telephone=yes">
@@ -41,19 +41,19 @@
   "@graph":[
     {
       "@type":"WebSite",
-      "@id":"https://nagybalazsweb.com/#website",
-      "url":"https://nagybalazsweb.com/",
+      "@id":"https://bazsinagy0317.github.io/sajatweboldal/#website",
+      "url":"https://bazsinagy0317.github.io/sajatweboldal/",
       "name":"Nagy Balázs — Webfejlesztés",
       "inLanguage":"hu-HU",
-      "publisher":{"@id":"https://nagybalazsweb.com/#business"}
+      "publisher":{"@id":"https://bazsinagy0317.github.io/sajatweboldal/#business"}
     },
     {
       "@type":"ProfessionalService",
-      "@id":"https://nagybalazsweb.com/#business",
+      "@id":"https://bazsinagy0317.github.io/sajatweboldal/#business",
       "name":"Nagy Balázs — Weboldal- és webshopfejlesztés",
       "description":"Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül.",
-      "url":"https://nagybalazsweb.com/",
-      "image":"https://nagybalazsweb.com/og.png",
+      "url":"https://bazsinagy0317.github.io/sajatweboldal/",
+      "image":"https://bazsinagy0317.github.io/sajatweboldal/og.png",
       "telephone":"+36704164210",
       "email":"bazsinagy0317@gmail.com",
       "vatID":"45734724-1-22",
@@ -63,7 +63,7 @@
       "areaServed":[{"@type":"City","name":"Pécs"},{"@type":"AdministrativeArea","name":"Baranya vármegye"},{"@type":"Country","name":"Magyarország"}],
       "knowsLanguage":"hu",
       "founder":{"@type":"Person","name":"Nagy Balázs","jobTitle":"Webfejlesztő",
-                 "url":"https://nagybalazsweb.com/","sameAs":["https://github.com/bazsinagy0317"]},
+                 "url":"https://bazsinagy0317.github.io/sajatweboldal/","sameAs":["https://github.com/bazsinagy0317"]},
       "sameAs":["https://github.com/bazsinagy0317"],
       "hasOfferCatalog":{
         "@type":"OfferCatalog","name":"Szolgáltatások",
@@ -76,7 +76,7 @@
     },
     {
       "@type":"FAQPage",
-      "@id":"https://nagybalazsweb.com/#faq",
+      "@id":"https://bazsinagy0317.github.io/sajatweboldal/#faq",
       "mainEntity":[
         {"@type":"Question","name":"Mennyi idő alatt készül el?","acceptedAnswer":{"@type":"Answer","text":"Egy bemutatkozó weboldal jellemzően két hét, egy teljes webshop három–négy hét, attól függően, milyen gyorsan érkeznek meg a szövegek és a képek. A pontos határidő az árajánlatban szerepel."}},
         {"@type":"Question","name":"Mit kell nekem biztosítanom hozzá?","acceptedAnswer":{"@type":"Answer","text":"Szövegeket a cégéről és a szolgáltatásairól, képeket a termékeiről vagy a munkájáról, valamint logót, ha van. Fotózást nem vállalok, de a meglévő képeket előkészítem a webre — méretezem és optimalizálom. Ha logó vagy arculat nincs, azt a Prémium csomag tartalmazza."}},
@@ -1307,9 +1307,13 @@ body.locked{overflow:hidden}
 (function(){
   'use strict';
 
-  /* Az űrlap a saját tárhelyen futó mail.php-nak küld.
-     Ha üresre állítod, visszaesik a levelezőprogram megnyitására. */
-  var FORM_ENDPOINT = '/mail.php';
+  /* ══════════════════════════════════════════════════════
+     BEÁLLÍTÁS — ide kerül a Cloudflare Worker címe.
+     A Worker telepítése után kapsz egy ilyen URL-t:
+       https://kapcsolati-urlap.<felhasznalonev>.workers.dev
+     Írd be ide. Amíg üresen marad, az űrlap a levelezőprogramot nyitja meg.
+     ══════════════════════════════════════════════════════ */
+  var FORM_ENDPOINT = '';
 
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var loadedAt = Date.now();
@@ -1903,7 +1907,9 @@ body.locked{overflow:hidden}
      Egyetlen kérés a saját kiszolgálónak. Nem tesz semmit a látogató gépére,
      és a szerver nem tárol IP-címet, csak naponta cserélődő lenyomatot.
      Ha üresre állítod a végpontot, a mérés kikapcsol. */
-  var STAT_ENDPOINT = '/stat.php';
+  /* A GitHub Pages statikus tárhely, PHP nem fut rajta — a mérés a MediaCenter
+     változatban működik. Ott az érték: '/stat.php' */
+  var STAT_ENDPOINT = '';
   if(STAT_ENDPOINT && navigator.doNotTrack !== '1' && window.doNotTrack !== '1'){
     try {
       fetch(STAT_ENDPOINT, {
