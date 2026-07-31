@@ -39,21 +39,28 @@ done
 # ── Székhely és nyilvántartási szám az impresszumba ──
 SED_I() { if sed --version >/dev/null 2>&1; then sed -i "$1" "$2"; else sed -i '' "$1" "$2"; fi }
 
-if [ $# -ge 2 ] && [ -n "${2:-}" ]; then
-  SZEK=$(printf '%s' "$2" | sed 's/[&/\\]/\\&/g')
-  SED_I "s/SZEKHELYCIM/${SZEK}/g" adatkezeles.html
-  echo "  ✓ székhely beírva"
+if grep -q SZEKHELYCIM adatkezeles.html 2>/dev/null; then
+  if [ $# -ge 2 ] && [ -n "${2:-}" ]; then
+    SZEK=$(printf '%s' "$2" | sed 's/[&/\\]/\\&/g')
+    SED_I "s/SZEKHELYCIM/${SZEK}/g" adatkezeles.html
+    echo "  ✓ székhely beírva"
+  else
+    echo "  ! FIGYELEM: a székhely helyén még SZEKHELYCIM áll az adatkezeles.html-ben."
+  fi
 else
-  echo "  ! FIGYELEM: a székhely helyén még SZEKHELYCIM áll az adatkezeles.html-ben."
-  echo "    Ezt kötelező kitölteni: bash beallit.sh $DOMAIN \"7621 Pécs, Példa utca 1.\" \"12345678\""
+  echo "  ✓ székhely már ki van töltve"
 fi
 
-if [ $# -ge 3 ] && [ -n "${3:-}" ]; then
-  NYSZ=$(printf '%s' "$3" | sed 's/[&/\\]/\\&/g')
-  SED_I "s/NYILVSZAM/${NYSZ}/g" adatkezeles.html
-  echo "  ✓ nyilvántartási szám beírva"
+if grep -q NYILVSZAM adatkezeles.html 2>/dev/null; then
+  if [ $# -ge 3 ] && [ -n "${3:-}" ]; then
+    NYSZ=$(printf '%s' "$3" | sed 's/[&/\\]/\\&/g')
+    SED_I "s/NYILVSZAM/${NYSZ}/g" adatkezeles.html
+    echo "  ✓ nyilvántartási szám beírva"
+  else
+    echo "  ! FIGYELEM: a nyilvántartási szám helyén még NYILVSZAM áll az adatkezeles.html-ben."
+  fi
 else
-  echo "  ! FIGYELEM: a nyilvántartási szám helyén még NYILVSZAM áll az adatkezeles.html-ben."
+  echo "  ✓ nyilvántartási szám már ki van töltve"
 fi
 
 TODAY=$(date +%Y-%m-%d)
