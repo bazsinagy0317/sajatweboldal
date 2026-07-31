@@ -4,4 +4,4 @@ Disallow: /adatok/
 Disallow: /statisztika.php
 Disallow: /config.php
 
-Sitemap: https://bazsinagy0317.github.io/sajatweboldal/sitemap.xml
+Sitemap: https://nagybalazsweb.com/sitemap.xml

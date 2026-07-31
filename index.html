@@ -7,22 +7,22 @@
 <meta name="description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak Pécsen. Saját kód, havi platformdíj nélkül, ÁFA-mentes számlával. 190 000 Ft-tól.">
 <meta name="author" content="Nagy Balázs">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://bazsinagy0317.github.io/sajatweboldal/">
+<link rel="canonical" href="https://nagybalazsweb.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="hu_HU">
 <meta property="og:site_name" content="Nagy Balázs — Webfejlesztés">
-<meta property="og:url" content="https://bazsinagy0317.github.io/sajatweboldal/">
+<meta property="og:url" content="https://nagybalazsweb.com/">
 <meta property="og:title" content="Weboldal, amit a cégéhez terveznek">
 <meta property="og:description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül. Pécs, Baranya — országosan online.">
-<meta property="og:image" content="https://bazsinagy0317.github.io/sajatweboldal/og.png">
+<meta property="og:image" content="https://nagybalazsweb.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Nagy Balázs — egyedi weboldal- és webshopfejlesztés">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Weboldal, amit a cégéhez terveznek">
 <meta name="twitter:description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül.">
-<meta name="twitter:image" content="https://bazsinagy0317.github.io/sajatweboldal/og.png">
+<meta name="twitter:image" content="https://nagybalazsweb.com/og.png">
 
 <meta name="theme-color" content="#141210">
 <meta name="format-detection" content="telephone=yes">
@@ -41,19 +41,19 @@
   "@graph":[
     {
       "@type":"WebSite",
-      "@id":"https://bazsinagy0317.github.io/sajatweboldal/#website",
-      "url":"https://bazsinagy0317.github.io/sajatweboldal/",
+      "@id":"https://nagybalazsweb.com/#website",
+      "url":"https://nagybalazsweb.com/",
       "name":"Nagy Balázs — Webfejlesztés",
       "inLanguage":"hu-HU",
-      "publisher":{"@id":"https://bazsinagy0317.github.io/sajatweboldal/#business"}
+      "publisher":{"@id":"https://nagybalazsweb.com/#business"}
     },
     {
       "@type":"ProfessionalService",
-      "@id":"https://bazsinagy0317.github.io/sajatweboldal/#business",
+      "@id":"https://nagybalazsweb.com/#business",
       "name":"Nagy Balázs — Weboldal- és webshopfejlesztés",
       "description":"Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül.",
-      "url":"https://bazsinagy0317.github.io/sajatweboldal/",
-      "image":"https://bazsinagy0317.github.io/sajatweboldal/og.png",
+      "url":"https://nagybalazsweb.com/",
+      "image":"https://nagybalazsweb.com/og.png",
       "telephone":"+36704164210",
       "email":"bazsinagy0317@gmail.com",
       "vatID":"45734724-1-22",
@@ -63,7 +63,7 @@
       "areaServed":[{"@type":"City","name":"Pécs"},{"@type":"AdministrativeArea","name":"Baranya vármegye"},{"@type":"Country","name":"Magyarország"}],
       "knowsLanguage":"hu",
       "founder":{"@type":"Person","name":"Nagy Balázs","jobTitle":"Webfejlesztő",
-                 "url":"https://bazsinagy0317.github.io/sajatweboldal/","sameAs":["https://github.com/bazsinagy0317"]},
+                 "url":"https://nagybalazsweb.com/","sameAs":["https://github.com/bazsinagy0317"]},
       "sameAs":["https://github.com/bazsinagy0317"],
       "hasOfferCatalog":{
         "@type":"OfferCatalog","name":"Szolgáltatások",
@@ -76,7 +76,7 @@
     },
     {
       "@type":"FAQPage",
-      "@id":"https://bazsinagy0317.github.io/sajatweboldal/#faq",
+      "@id":"https://nagybalazsweb.com/#faq",
       "mainEntity":[
         {"@type":"Question","name":"Mennyi idő alatt készül el?","acceptedAnswer":{"@type":"Answer","text":"Egy bemutatkozó weboldal jellemzően két hét, egy teljes webshop három–négy hét, attól függően, milyen gyorsan érkeznek meg a szövegek és a képek. A pontos határidő az árajánlatban szerepel."}},
         {"@type":"Question","name":"Mit kell nekem biztosítanom hozzá?","acceptedAnswer":{"@type":"Answer","text":"Szövegeket a cégéről és a szolgáltatásairól, képeket a termékeiről vagy a munkájáról, valamint logót, ha van. Fotózást nem vállalok, de a meglévő képeket előkészítem a webre — méretezem és optimalizálom. Ha logó vagy arculat nincs, azt a Prémium csomag tartalmazza."}},
@@ -127,7 +127,8 @@ img,svg{max-width:100%;display:block}
 
 /* ═══════════════ FELÜLETI ELEMEK ═══════════════ */
 #prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--acc);z-index:70;transition:width .1s linear}
-#cdot,#cring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%}
+#cdot,#cring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;
+  transform:translate(-120px,-120px)}
 #cdot{width:5px;height:5px;background:var(--acc);margin:-2.5px 0 0 -2.5px}
 #cring{width:34px;height:34px;border:1px solid rgba(196,71,31,.6);margin:-17px 0 0 -17px;transition:width .25s,height .25s,margin .25s,border-color .25s,background .25s}
 #cring.big{width:74px;height:74px;margin:-37px 0 0 -37px;border-color:rgba(196,71,31,.95);background:rgba(196,71,31,.07)}
@@ -399,7 +400,7 @@ footer a:hover{color:var(--acc)}
   100%{opacity:0}
 }
 .cart{position:absolute;right:14px;top:41px;z-index:4;display:flex;align-items:center;gap:4px;
-  font-family:var(--mono);font-size:8.5px;color:var(--acc);opacity:0}
+  font-family:var(--mono);font-size:9.5px;color:var(--acc);opacity:0}
 .play .cart{animation:cartIn 9s ease-out infinite}
 @keyframes cartIn{0%,50%{opacity:0;transform:scale(.7)}55%{opacity:1;transform:scale(1.25)}60%,86%{opacity:1;transform:scale(1)}94%,100%{opacity:0}}
 .cart b{background:var(--acc);color:#fff;border-radius:99px;padding:1px 5px;font-weight:600}
@@ -511,7 +512,15 @@ body.locked{overflow:hidden}
 .calc fieldset{border:0;padding:0;min-width:0}
 .calc legend{padding:0}
 .calc .opts{background:var(--panel);padding:32px 28px}
-.calc .side{background:var(--panel2);padding:32px 28px;display:flex;flex-direction:column}
+.calc .side{background:var(--panel2);padding:0}
+.calc .sidein{padding:32px 28px;display:flex;flex-direction:column;position:sticky;top:76px}
+.ghint{font-size:11.5px;line-height:1.7;color:var(--dim);font-weight:300;margin-top:11px;max-width:60ch}
+.havi{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  margin-top:14px;padding-top:14px;border-top:1px solid var(--line2)}
+.havi .hl{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.havi .hn{font-family:var(--dis);font-size:17px;font-weight:600;letter-spacing:-.02em;color:var(--fg);white-space:nowrap}
+.sline.havi-sor span{color:var(--dim)}
+.sline.havi-sor b{color:var(--dim2)}
 .grp{margin-bottom:28px}
 .grp:last-child{margin-bottom:0}
 .glab{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:13px}
@@ -655,6 +664,7 @@ body.locked{overflow:hidden}
 @media(max-width:1024px){
   .steps{grid-template-columns:repeat(2,1fr);gap:24px}
   .calc{grid-template-columns:1fr}
+  .calc .sidein{position:static}
   .total{margin-top:26px}
   .contact{grid-template-columns:1fr;gap:44px}
   .sec{padding-top:78px}
@@ -684,7 +694,8 @@ body.locked{overflow:hidden}
   :root{--pad:24px}
   .pick{grid-template-columns:1fr}
   .chk{grid-template-columns:1fr}
-  .calc .opts,.calc .side{padding:24px 20px}
+  .calc .opts{padding:24px 20px}
+  .calc .sidein{padding:24px 20px;position:static}
   .cmp .pane{padding:26px 22px}
   .cmp h3{margin-bottom:11px}
   .cmp li{font-size:12.5px;margin-bottom:8px}
@@ -715,7 +726,8 @@ body.locked{overflow:hidden}
   .q .a{padding-right:0}
   .refl,.refr{padding:26px 22px}
   .card{padding:26px 22px}
-  .w,.calc .opts,.calc .side,.cmp .pane,.refl,.refr{padding:26px 22px}
+  .w,.calc .opts,.cmp .pane,.refl,.refr{padding:26px 22px}
+  .calc .sidein{padding:26px 22px}
 }
 
 /* telefon */
@@ -978,24 +990,29 @@ body.locked{overflow:hidden}
     <h2 id="h-kalk">Mennyibe <em>kerülne</em></h2>
     <div class="idx">04 — Árkalkulátor</div>
   </div>
-  <p class="sub rv">Állítsa össze, mire van szüksége — az árat azonnal látja. Ez tájékoztató becslés, nem kötelezettség: a végleges összeg a díjmentes egyeztetés után, írásos ajánlatban rögzül.</p>
+  <p class="sub rv">Állítsa össze, mire van szüksége — az árat azonnal látja. Itt szerepel minden, amit vállalok, a valós áraival. Ez tájékoztató becslés, nem kötelezettség: a végleges összeg a díjmentes egyeztetés után, írásos ajánlatban rögzül.</p>
   <div class="calc rv" id="calc">
     <div class="opts">
+
       <fieldset class="grp">
-        <legend class="glab">01 — Mire van szüksége</legend>
+        <legend class="glab">01 — Alapcsomag</legend>
         <div class="pick" role="radiogroup" aria-label="Csomag">
-          <button type="button" class="opt" role="radio" aria-checked="false" data-g="csomag" data-v="weboldal" data-ar="190000"><span class="t">Weboldal</span><span class="p">190 000 Ft-tól</span></button>
-          <button type="button" class="opt" role="radio" aria-checked="true" data-g="csomag" data-v="webshop" data-ar="450000"><span class="t">Webshop</span><span class="p">450 000 Ft-tól</span></button>
-          <button type="button" class="opt" role="radio" aria-checked="false" data-g="csomag" data-v="premium" data-ar="790000"><span class="t">Prémium</span><span class="p">790 000 Ft-tól</span></button>
+          <button type="button" class="opt" role="radio" aria-checked="false" data-g="csomag" data-v="weboldal" data-ar="190000"><span class="t">Weboldal</span><span class="p">190 000 Ft</span></button>
+          <button type="button" class="opt" role="radio" aria-checked="true" data-g="csomag" data-v="webshop" data-ar="450000"><span class="t">Webshop</span><span class="p">450 000 Ft</span></button>
+          <button type="button" class="opt" role="radio" aria-checked="false" data-g="csomag" data-v="premium" data-ar="790000"><span class="t">Prémium</span><span class="p">790 000 Ft</span></button>
         </div>
+        <p class="ghint" id="csomaghint">A Webshop csomag 8 aloldalt tartalmaz, termékkezeléssel és rendeléskezelő felülettel.</p>
       </fieldset>
+
       <div class="grp">
         <label class="glab" for="ald">02 — Aloldalak száma</label>
         <div class="rangewrap">
-          <input type="range" id="ald" min="4" max="20" value="8" step="1" aria-describedby="aldv">
+          <input type="range" id="ald" min="4" max="24" value="8" step="1" aria-describedby="aldv">
           <span class="rv-num" id="aldv">8 oldal</span>
         </div>
+        <p class="ghint">A csomagban foglaltakon felül minden további aloldal 12 000 Ft.</p>
       </div>
+
       <fieldset class="grp">
         <legend class="glab">03 — Nyelvek</legend>
         <div class="pick" role="radiogroup" aria-label="Nyelvek">
@@ -1004,25 +1021,84 @@ body.locked{overflow:hidden}
           <button type="button" class="opt" role="radio" aria-checked="false" data-g="nyelv" data-v="Magyar, angol és német" data-ar="160000"><span class="t">+ Német is</span><span class="p">+160 000 Ft</span></button>
         </div>
       </fieldset>
+
       <fieldset class="grp">
-        <legend class="glab">04 — Kiegészítők</legend>
+        <legend class="glab">04 — Értékesítés és fizetés</legend>
         <div class="chk">
-          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Számlázó-integráció" data-ar="60000"><span class="box" aria-hidden="true">✓</span>Számlázó-integráció<span class="pr2">+60e</span></button>
-          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Egyedi arculat, logó" data-ar="80000"><span class="box" aria-hidden="true">✓</span>Egyedi arculat, logó<span class="pr2">+80e</span></button>
-          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Foglalási rendszer" data-ar="70000"><span class="box" aria-hidden="true">✓</span>Foglalási rendszer<span class="pr2">+70e</span></button>
-          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Hírlevél-integráció" data-ar="50000"><span class="box" aria-hidden="true">✓</span>Hírlevél-integráció<span class="pr2">+50e</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Bankkártyás fizetés beállítása" data-ar="70000"><span class="box" aria-hidden="true">✓</span>Bankkártyás fizetés beállítása<span class="pr2">+70 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Utánvét és futárszolgálat-integráció" data-ar="60000"><span class="box" aria-hidden="true">✓</span>Utánvét, futárszolgálat<span class="pr2">+60 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Számlázó-integráció (Billingo, Számlázz.hu)" data-ar="60000"><span class="box" aria-hidden="true">✓</span>Számlázó-integráció<span class="pr2">+60 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Készletkezelés és termékimport" data-ar="80000"><span class="box" aria-hidden="true">✓</span>Készletkezelés, termékimport<span class="pr2">+80 000</span></button>
         </div>
       </fieldset>
+
+      <fieldset class="grp">
+        <legend class="glab">05 — Tartalom és arculat</legend>
+        <div class="chk">
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Egyedi arculat és logó" data-ar="80000"><span class="box" aria-hidden="true">✓</span>Egyedi arculat, logó<span class="pr2">+80 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Blog vagy tudásbázis modul" data-ar="70000"><span class="box" aria-hidden="true">✓</span>Blog, tudásbázis modul<span class="pr2">+70 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Szövegírás a teljes oldalra" data-ar="60000"><span class="box" aria-hidden="true">✓</span>Szövegírás az egész oldalra<span class="pr2">+60 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Meglévő képek webre optimalizálása" data-ar="25000"><span class="box" aria-hidden="true">✓</span>Képek webre készítése<span class="pr2">+25 000</span></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="grp">
+        <legend class="glab">06 — Rendszerek és integrációk</legend>
+        <div class="chk">
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Foglalási vagy időpontfoglaló rendszer" data-ar="70000"><span class="box" aria-hidden="true">✓</span>Foglalási rendszer<span class="pr2">+70 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Hírlevél-integráció" data-ar="50000"><span class="box" aria-hidden="true">✓</span>Hírlevél-integráció<span class="pr2">+50 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Felhasználói fiók és belépés adatbázissal" data-ar="120000"><span class="box" aria-hidden="true">✓</span>Fiók és belépés (adatbázis)<span class="pr2">+120 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Előfizetéses, visszatérő fizetés" data-ar="140000"><span class="box" aria-hidden="true">✓</span>Előfizetéses modell<span class="pr2">+140 000</span></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="grp">
+        <legend class="glab">07 — Keresőoptimalizálás és mérés</legend>
+        <div class="chk">
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Bővített keresőoptimalizálás célzott aloldalakkal" data-ar="90000"><span class="box" aria-hidden="true">✓</span>Bővített keresőoptimalizálás<span class="pr2">+90 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Süti nélküli látogatottság-mérés" data-ar="30000"><span class="box" aria-hidden="true">✓</span>Látogatottság-mérés<span class="pr2">+30 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Google cégprofil beállítása" data-ar="25000"><span class="box" aria-hidden="true">✓</span>Google cégprofil beállítás<span class="pr2">+25 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Google Search Console beüzemelése" data-ar="20000"><span class="box" aria-hidden="true">✓</span>Search Console beüzemelés<span class="pr2">+20 000</span></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="grp">
+        <legend class="glab">08 — Egyéb</legend>
+        <div class="chk">
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Meglévő oldal átköltöztetése" data-ar="50000"><span class="box" aria-hidden="true">✓</span>Meglévő oldal átköltöztetése<span class="pr2">+50 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Jogi oldalak előkészítése (impresszum, adatkezelés, ÁSZF váz)" data-ar="40000"><span class="box" aria-hidden="true">✓</span>Jogi oldalak előkészítése<span class="pr2">+40 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="E-mail fiókok és domain beállítása" data-ar="20000"><span class="box" aria-hidden="true">✓</span>E-mail és domain beállítás<span class="pr2">+20 000</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-v="Betanítás és írásos kezelési útmutató" data-ar="25000"><span class="box" aria-hidden="true">✓</span>Betanítás, kezelési útmutató<span class="pr2">+25 000</span></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="grp" style="margin-bottom:0">
+        <legend class="glab">09 — Havi szolgáltatás (nem kötelező)</legend>
+        <div class="chk">
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-havi="1" data-v="Karbantartás és frissítés" data-ar="12000"><span class="box" aria-hidden="true">✓</span>Karbantartás, frissítés<span class="pr2">12 000/hó</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-havi="1" data-v="Tartalomfeltöltés havi két órában" data-ar="18000"><span class="box" aria-hidden="true">✓</span>Tartalomfeltöltés (2 óra)<span class="pr2">18 000/hó</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-havi="1" data-v="Tárhely és domain ügyintézése" data-ar="5000"><span class="box" aria-hidden="true">✓</span>Tárhely, domain intézése<span class="pr2">5 000/hó</span></button>
+          <button type="button" class="cb" role="checkbox" aria-checked="false" data-havi="1" data-v="Havi látogatottsági riport" data-ar="8000"><span class="box" aria-hidden="true">✓</span>Havi látogatottsági riport<span class="pr2">8 000/hó</span></button>
+        </div>
+        <p class="ghint">A havi szolgáltatások bármikor lemondhatók, és nélkülük is működik az oldal. Az egyszeri díjba nem számítanak bele.</p>
+      </fieldset>
+
     </div>
     <div class="side">
-      <div class="sumlab">Az Ön összeállítása</div>
-      <div id="sumlist"></div>
-      <div class="total">
-        <div class="l">Becsült ár</div>
-        <div class="n" id="ctotal" role="status" aria-live="polite">450 000 Ft</div>
-        <div class="s">Alanyi adómentes — nem jön rá ÁFA</div>
-        <button type="button" class="b1 mag" id="ctransfer">Kérem ezt az ajánlatot →</button>
-        <p class="chint">Az összeállítás átkerül a kapcsolati űrlapba, Önnek csak el kell küldenie.</p>
+      <div class="sidein">
+        <div class="sumlab">Az Ön összeállítása</div>
+        <div id="sumlist"></div>
+        <div class="total">
+          <div class="l">Egyszeri díj</div>
+          <div class="n" id="ctotal" role="status" aria-live="polite">450 000 Ft</div>
+          <div class="s">Alanyi adómentes — nem jön rá ÁFA</div>
+          <div class="havi" id="chavi" hidden>
+            <span class="hl">Havi szolgáltatás</span>
+            <span class="hn" id="chavin">0 Ft</span>
+          </div>
+          <button type="button" class="b1 mag" id="ctransfer">Kérem ezt az ajánlatot →</button>
+          <p class="chint">Az összeállítás átkerül a kapcsolati űrlapba, Önnek csak el kell küldenie.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1307,13 +1383,9 @@ body.locked{overflow:hidden}
 (function(){
   'use strict';
 
-  /* ══════════════════════════════════════════════════════
-     BEÁLLÍTÁS — ide kerül a Cloudflare Worker címe.
-     A Worker telepítése után kapsz egy ilyen URL-t:
-       https://kapcsolati-urlap.<felhasznalonev>.workers.dev
-     Írd be ide. Amíg üresen marad, az űrlap a levelezőprogramot nyitja meg.
-     ══════════════════════════════════════════════════════ */
-  var FORM_ENDPOINT = '';
+  /* Az űrlap a saját tárhelyen futó mail.php-nak küld.
+     Ha üresre állítod, visszaesik a levelezőprogram megnyitására. */
+  var FORM_ENDPOINT = '/mail.php';
 
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var loadedAt = Date.now();
@@ -1775,18 +1847,28 @@ body.locked{overflow:hidden}
   if(calc){
     var BENNE = { weboldal:5, webshop:8, premium:12 };
     var NEV   = { weboldal:'Weboldal csomag', webshop:'Webshop csomag', premium:'Prémium csomag' };
+    var HINT  = {
+      weboldal:'A Weboldal csomag 5 aloldalt tartalmaz, kapcsolati űrlappal és keresőoptimalizálási alapbeállítással.',
+      webshop:'A Webshop csomag 8 aloldalt tartalmaz, termékkezeléssel és rendeléskezelő felülettel.',
+      premium:'A Prémium csomag 12 aloldalt tartalmaz, egyedi arculattal és kétnyelvű felülettel.'
+    };
     var PLUSZ = 12000;
     var ald = document.getElementById('ald'), aldv = document.getElementById('aldv'),
         sumlist = document.getElementById('sumlist'), ctotal = document.getElementById('ctotal');
 
-    function ft(n){ return n.toLocaleString('hu-HU').replace(/ /g, ' '); }
+    /* Egységes ezres tagolás, hogy az összegoszlop rendezett legyen */
+    function ft(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
     function sel(g){ return calc.querySelector('.opt[data-g="' + g + '"][aria-checked="true"]'); }
+
+    var hintEl = document.getElementById('csomaghint');
+    var chavi = document.getElementById('chavi'), chavin = document.getElementById('chavin');
 
     function draw(){
       var cs = sel('csomag'), ny = sel('nyelv');
-      var tetel = [], osszeg = 0;
+      var tetel = [], osszeg = 0, haviTetel = [], haviOsszeg = 0;
       var alap = parseInt(cs.dataset.ar, 10);
       tetel.push([NEV[cs.dataset.v], alap]); osszeg += alap;
+      if(hintEl) hintEl.textContent = HINT[cs.dataset.v] || '';
 
       var db = parseInt(ald.value, 10), benne = BENNE[cs.dataset.v];
       aldv.textContent = db + ' oldal';
@@ -1799,19 +1881,38 @@ body.locked{overflow:hidden}
 
       calc.querySelectorAll('.cb[aria-checked="true"]').forEach(function(b){
         var v = parseInt(b.dataset.ar, 10);
-        tetel.push([b.dataset.v, v]); osszeg += v;
+        if(b.dataset.havi){ haviTetel.push([b.dataset.v, v]); haviOsszeg += v; }
+        else { tetel.push([b.dataset.v, v]); osszeg += v; }
       });
 
       sumlist.innerHTML = '';
-      tetel.forEach(function(x){
-        var d = document.createElement('div'); d.className = 'sline';
+      function sor(x, havi){
+        var d = document.createElement('div');
+        d.className = 'sline' + (havi ? ' havi-sor' : '');
         var sp = document.createElement('span'); sp.textContent = x[0];
-        var bb = document.createElement('b'); bb.textContent = ft(x[1]);
+        var bb = document.createElement('b'); bb.textContent = ft(x[1]) + (havi ? ' /hó' : '');
         d.appendChild(sp); d.appendChild(bb); sumlist.appendChild(d);
-      });
+      }
+      tetel.forEach(function(x){ sor(x, false); });
+      haviTetel.forEach(function(x){ sor(x, true); });
+
       ctotal.textContent = ft(osszeg) + ' Ft';
+      if(haviOsszeg > 0){
+        chavi.hidden = false;
+        chavin.textContent = ft(haviOsszeg) + ' Ft / hó';
+      } else {
+        chavi.hidden = true;
+      }
+
       calc.dataset.osszeg = osszeg;
-      calc.dataset.tetel = tetel.map(function(x){ return '- ' + x[0] + ': ' + ft(x[1]) + ' Ft'; }).join('\n');
+      calc.dataset.havi = haviOsszeg;
+      var sorok = tetel.map(function(x){ return '- ' + x[0] + ': ' + ft(x[1]) + ' Ft'; });
+      if(haviTetel.length){
+        sorok.push('');
+        sorok.push('Havi szolgáltatás:');
+        haviTetel.forEach(function(x){ sorok.push('- ' + x[0] + ': ' + ft(x[1]) + ' Ft / hó'); });
+      }
+      calc.dataset.tetel = sorok.join('\n');
     }
 
     calc.querySelectorAll('.opt').forEach(function(b){
@@ -1838,10 +1939,12 @@ body.locked{overflow:hidden}
     if(ctr) ctr.addEventListener('click', function(){
       var uz = document.getElementById('uzenet');
       if(uz){
+        var havi = parseInt(calc.dataset.havi || '0', 10);
         uz.value = 'Az árkalkulátor alapján az alábbi összeállítás érdekelne:\n\n'
                  + calc.dataset.tetel
-                 + '\n\nBecsült ár: ' + ft(parseInt(calc.dataset.osszeg, 10)) + ' Ft\n\n'
-                 + 'Kérem, jelezzen vissza, hogy ez mennyire reális a mi esetünkben.';
+                 + '\n\nBecsült egyszeri díj: ' + ft(parseInt(calc.dataset.osszeg, 10)) + ' Ft'
+                 + (havi > 0 ? '\nHavi szolgáltatás: ' + ft(havi) + ' Ft / hó' : '')
+                 + '\n\nKérem, jelezzen vissza, hogy ez mennyire reális a mi esetünkben.';
       }
       var cel = document.getElementById('kapcsolat');
       if(cel) cel.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'});
@@ -1907,9 +2010,7 @@ body.locked{overflow:hidden}
      Egyetlen kérés a saját kiszolgálónak. Nem tesz semmit a látogató gépére,
      és a szerver nem tárol IP-címet, csak naponta cserélődő lenyomatot.
      Ha üresre állítod a végpontot, a mérés kikapcsol. */
-  /* A GitHub Pages statikus tárhely, PHP nem fut rajta — a mérés a MediaCenter
-     változatban működik. Ott az érték: '/stat.php' */
-  var STAT_ENDPOINT = '';
+  var STAT_ENDPOINT = '/stat.php';
   if(STAT_ENDPOINT && navigator.doNotTrack !== '1' && window.doNotTrack !== '1'){
     try {
       fetch(STAT_ENDPOINT, {
