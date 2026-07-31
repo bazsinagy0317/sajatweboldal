@@ -7,25 +7,26 @@
 <meta name="description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak Pécsen. Saját kód, havi platformdíj nélkül, ÁFA-mentes számlával. 190 000 Ft-tól.">
 <meta name="author" content="Nagy Balázs">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://DOMAIN.HU/">
+<link rel="canonical" href="https://nagybalazsweb.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="hu_HU">
 <meta property="og:site_name" content="Nagy Balázs — Webfejlesztés">
-<meta property="og:url" content="https://DOMAIN.HU/">
+<meta property="og:url" content="https://nagybalazsweb.com/">
 <meta property="og:title" content="Weboldal, amit a cégéhez terveznek">
 <meta property="og:description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül. Pécs, Baranya — országosan online.">
-<meta property="og:image" content="https://DOMAIN.HU/og.png">
+<meta property="og:image" content="https://nagybalazsweb.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Nagy Balázs — egyedi weboldal- és webshopfejlesztés">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Weboldal, amit a cégéhez terveznek">
 <meta name="twitter:description" content="Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül.">
-<meta name="twitter:image" content="https://DOMAIN.HU/og.png">
+<meta name="twitter:image" content="https://nagybalazsweb.com/og.png">
 
 <meta name="theme-color" content="#141210">
 <meta name="format-detection" content="telephone=yes">
+<link rel="alternate" type="application/rss+xml" title="Nagy Balázs — Tudásbázis" href="rss.xml">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
@@ -40,19 +41,19 @@
   "@graph":[
     {
       "@type":"WebSite",
-      "@id":"https://DOMAIN.HU/#website",
-      "url":"https://DOMAIN.HU/",
+      "@id":"https://nagybalazsweb.com/#website",
+      "url":"https://nagybalazsweb.com/",
       "name":"Nagy Balázs — Webfejlesztés",
       "inLanguage":"hu-HU",
-      "publisher":{"@id":"https://DOMAIN.HU/#business"}
+      "publisher":{"@id":"https://nagybalazsweb.com/#business"}
     },
     {
       "@type":"ProfessionalService",
-      "@id":"https://DOMAIN.HU/#business",
+      "@id":"https://nagybalazsweb.com/#business",
       "name":"Nagy Balázs — Weboldal- és webshopfejlesztés",
       "description":"Egyedi fejlesztésű weboldal és webshop kis- és középvállalkozásoknak. Saját kód, havi platformdíj nélkül.",
-      "url":"https://DOMAIN.HU/",
-      "image":"https://DOMAIN.HU/og.png",
+      "url":"https://nagybalazsweb.com/",
+      "image":"https://nagybalazsweb.com/og.png",
       "telephone":"+36704164210",
       "email":"bazsinagy0317@gmail.com",
       "vatID":"45734724-1-22",
@@ -61,6 +62,9 @@
       "address":{"@type":"PostalAddress","postalCode":"7900","addressLocality":"Szigetvár","addressRegion":"Baranya","addressCountry":"HU"},
       "areaServed":[{"@type":"City","name":"Pécs"},{"@type":"AdministrativeArea","name":"Baranya vármegye"},{"@type":"Country","name":"Magyarország"}],
       "knowsLanguage":"hu",
+      "founder":{"@type":"Person","name":"Nagy Balázs","jobTitle":"Webfejlesztő",
+                 "url":"https://nagybalazsweb.com/","sameAs":["https://github.com/bazsinagy0317"]},
+      "sameAs":["https://github.com/bazsinagy0317"],
       "hasOfferCatalog":{
         "@type":"OfferCatalog","name":"Szolgáltatások",
         "itemListElement":[
@@ -72,7 +76,7 @@
     },
     {
       "@type":"FAQPage",
-      "@id":"https://DOMAIN.HU/#faq",
+      "@id":"https://nagybalazsweb.com/#faq",
       "mainEntity":[
         {"@type":"Question","name":"Mennyi idő alatt készül el?","acceptedAnswer":{"@type":"Answer","text":"Egy bemutatkozó weboldal jellemzően két hét, egy teljes webshop három–négy hét, attól függően, milyen gyorsan érkeznek meg a szövegek és a képek. A pontos határidő az árajánlatban szerepel."}},
         {"@type":"Question","name":"Mit kell nekem biztosítanom hozzá?","acceptedAnswer":{"@type":"Answer","text":"Szövegeket a cégéről és a szolgáltatásairól, képeket a termékeiről vagy a munkájáról, valamint logót, ha van. Fotózást nem vállalok, de a meglévő képeket előkészítem a webre — méretezem és optimalizálom. Ha logó vagy arculat nincs, azt a Prémium csomag tartalmazza."}},
@@ -635,6 +639,16 @@ body.locked{overflow:hidden}
   .hb{grid-template-columns:1fr;gap:34px}
   .ctabox{flex-direction:row;flex-wrap:wrap}
   .b1,.b2{flex:1 1 240px}
+  /* nyolc menüpont + gomb 1180px alatt már nem fér ki: mobilmenüre váltunk */
+  .burger{display:flex}
+  .navcta{display:none}
+  .navlinks{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:rgba(20,18,16,.98);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.14em;
+    transform:translateY(-160%);transition:transform .4s cubic-bezier(.3,.8,.3,1);max-height:72vh;overflow-y:auto}
+  .navlinks.open{transform:none}
+  .navlinks a{padding:16px 0;border-bottom:1px solid var(--line2);min-height:48px;display:flex;align-items:center}
+  .navlinks a::after{display:none}
 }
 
 /* tablet fekvő */
@@ -650,15 +664,6 @@ body.locked{overflow:hidden}
 @media(max-width:900px){
   :root{--pad:32px}
   .fgridx{grid-template-columns:1fr 1fr}
-  .burger{display:flex}
-  .navcta{display:none}
-  .navlinks{position:fixed;top:57px;left:0;right:0;flex-direction:column;gap:0;
-    background:rgba(20,18,16,.98);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-    padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.14em;
-    transform:translateY(-160%);transition:transform .4s cubic-bezier(.3,.8,.3,1);max-height:calc(100dvh - 57px);overflow-y:auto}
-  .navlinks.open{transform:none}
-  .navlinks a{padding:16px 0;border-bottom:1px solid var(--line2);min-height:48px;display:flex;align-items:center}
-  .navlinks a::after{display:none}
   .grid3{grid-template-columns:repeat(2,1fr)}
   .grid3 .card:last-child{grid-column:1 / -1}
   .cmp{display:block}
@@ -806,6 +811,7 @@ body.locked{overflow:hidden}
       <a href="#folyamat">Folyamat</a>
       <a href="#csomagok">Csomagok</a>
       <a href="#kalkulator">Kalkulátor</a>
+      <a href="tudasbazis.html">Tudásbázis</a>
       <a href="#referencia">Referencia</a>
       <a href="#gyik">GYIK</a>
       <a href="#kapcsolat">Kapcsolat</a>
@@ -1231,17 +1237,20 @@ body.locked{overflow:hidden}
           <a href="#kalkulator">Árkalkulátor</a>
           <a href="#referencia">Referencia</a>
           <a href="#gyik">GYIK</a>
+          <a href="tudasbazis.html">Tudásbázis</a>
           <a href="#kapcsolat">Kapcsolat</a>
         </nav>
       </div>
 
       <div class="fcell">
-        <h2 class="fh">Amiben segítek</h2>
-        <nav aria-label="Szolgáltatások">
-          <a href="#szolgaltatasok">Bemutatkozó weboldal</a>
-          <a href="#szolgaltatasok">Webshop</a>
-          <a href="#szolgaltatasok">Integrációk</a>
-          <a href="#csomagok">Karbantartás</a>
+        <h2 class="fh">Területek</h2>
+        <nav aria-label="Területek">
+          <a href="weboldal-keszites-pecs.html">Weboldalkészítés Pécs</a>
+          <a href="webshop-keszites-pecs.html">Webshopkészítés Pécs</a>
+          <a href="weboldal-keszites-kaposvar.html">Kaposvár</a>
+          <a href="weboldal-keszites-szekszard.html">Szekszárd</a>
+          <a href="weboldal-keszites-budapest.html">Budapest</a>
+          <a href="tudasbazis.html">Összes vármegye →</a>
         </nav>
       </div>
 

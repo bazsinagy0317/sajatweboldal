@@ -29,7 +29,7 @@ PHP-n keresztül küldi az e-mailt a **Resend**-del — nincs szükség külső 
 
 ## 1. lépés — Domain beírása
 
-A fájlokban `DOMAIN.HU` helykitöltő szerepel. Egy paranccsal cserélhető:
+A fájlokban `nagybalazsweb.com` helykitöltő szerepel. Egy paranccsal cserélhető:
 
 ```bash
 bash beallit.sh a-domainem.hu "7621 Pécs, Példa utca 1." "51234567"
@@ -229,3 +229,55 @@ látogatók IP-címe **nem jut el a Google-höz** — ez a német bírósági gy
 
 A licencfeltételek a `betu/LICENC.txt` fájlban vannak. Ezt a fájlt hagyd a
 csomagban, ne töröld.
+
+---
+
+## Keresőoptimalizálás — mi került bele
+
+Az oldal mostantól **35 önálló címből** áll: a kezdőlap, a tudásbázis, egy webshopos
+aloldal, mind a **19 vármegyeszékhely** saját oldala, **12 szakmai cikk** és a jogi oldal.
+Mindegyiknek saját címe, leírása, morzsamenüje és strukturált adata van.
+
+### 1. lépés — Google Search Console (a legfontosabb)
+
+1. Nyisd meg: **https://search.google.com/search-console**
+2. „Tulajdon hozzáadása" → **Domain** típus (ez fedi a www-s és www nélküli címet is)
+3. A Google ad egy **TXT rekordot** — ezt a MediaCenter DNS-beállításai közé kell felvenni
+4. Ellenőrzés után: **Sitemapek** menü → írd be: `sitemap.xml` → Beküldés
+5. Az „URL-ellenőrzés" mezőbe beírva egy-egy fontos oldalt kérhetsz soron kívüli indexelést
+
+> Ez az egyetlen lépés, ami nélkül a Google lassabban találja meg az új oldalakat.
+> Öt perc, és utána magától követi a változásokat.
+
+### 2. lépés — Bing Webmaster Tools
+
+**https://www.bing.com/webmasters** — a Search Console-ból egy kattintással importálható.
+Innen jön a Bing és a ChatGPT keresési találatainak egy része is.
+
+### 3. lépés — Azonnali indexelés-értesítő (IndexNow)
+
+A csomagban van egy `bekuldes.php`, ami egyetlen hívással szól a Bingnek, a Yandexnek és
+a Seznamnak, hogy változott az oldal.
+
+```
+https://a-domainem.hu/bekuldes.php?jelszo=<a statisztika jelszava>
+```
+
+Új vagy módosított oldal után futtasd le egyszer. Egy konkrét címre:
+
+```
+https://a-domainem.hu/bekuldes.php?jelszo=...&url=/uj-oldal.html
+```
+
+A kulcsfájl (`dfa106d93f02b86bd2a328db6e8d24ae.txt`) **maradjon a gyökérkönyvtárban** —
+a keresők ezzel ellenőrzik, hogy tényleg te vagy a tulajdonos.
+
+### 4. lépés — Google cégprofil
+
+Ingyenes, és a helyi keresések nagy része ezen múlik:
+**https://www.google.com/business** — a részletes útmutató a tudásbázisban van
+(`google-cegprofil-helyi-kereses.html`).
+
+### 5. lépés — RSS
+
+A `rss.xml` a tudásbázis cikkeit teszi közzé. Hírolvasók és aggregátorok tudják követni.

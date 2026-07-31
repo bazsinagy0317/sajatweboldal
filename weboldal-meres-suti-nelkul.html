@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hogyan mérd a weboldalad süti nélkül? — mérés süti-sáv nélkül | Nagy Balázs</title>
+<meta name="description" content="Lehet weboldalt mérni süti és süti-sáv nélkül? Igen. Végigvesszük, mit ad a Google Analytics, mit a süti nélküli mérés, és melyik mikor a jobb választás.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#141210">
+<meta name="author" content="Nagy Balázs">
+<link rel="canonical" href="https://nagybalazsweb.com/weboldal-meres-suti-nelkul.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:site_name" content="Nagy Balázs — Weboldal- és webshopfejlesztés">
+<meta property="og:title" content="Hogyan mérd a weboldalad süti nélkül? — mérés süti-sáv nélkül | Nagy Balázs">
+<meta property="og:description" content="Lehet weboldalt mérni süti és süti-sáv nélkül? Igen. Végigvesszük, mit ad a Google Analytics, mit a süti nélküli mérés, és melyik mikor a jobb választás.">
+<meta property="og:url" content="https://nagybalazsweb.com/weboldal-meres-suti-nelkul.html">
+<meta property="og:image" content="https://nagybalazsweb.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hogyan mérd a weboldalad süti nélkül? — mérés süti-sáv nélkül | Nagy Balázs">
+<meta name="twitter:description" content="Lehet weboldalt mérni süti és süti-sáv nélkül? Igen. Végigvesszük, mit ad a Google Analytics, mit a süti nélküli mérés, és melyik mikor a jobb választás.">
+<meta name="twitter:image" content="https://nagybalazsweb.com/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="font" type="font/woff2" href="betu/poppins-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="betu/poppins-700.woff2" crossorigin>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Kezdőlap",
+     "item": "https://nagybalazsweb.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Tudásbázis",
+     "item": "https://nagybalazsweb.com/tudasbazis.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Hogyan mérd a weboldalad süti nélkül?",
+     "item": "https://nagybalazsweb.com/weboldal-meres-suti-nelkul.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "Hogyan mérd a weboldalad süti nélkül? — mérés süti-sáv nélkül",
+   "description": "Lehet weboldalt mérni süti és süti-sáv nélkül? Igen. Végigvesszük, mit ad a Google Analytics, mit a süti nélküli mérés, és melyik mikor a jobb választás.",
+   "inLanguage": "hu",
+   "datePublished": "2026-07-31",
+   "dateModified": "2026-07-31",
+   "author": {
+    "@type": "Person",
+    "name": "Nagy Balázs",
+    "url": "https://nagybalazsweb.com/",
+    "jobTitle": "Webfejlesztő",
+    "sameAs": [
+     "https://github.com/bazsinagy0317"
+    ]
+   },
+   "publisher": {
+    "@type": "ProfessionalService",
+    "name": "Nagy Balázs — Weboldal- és webshopfejlesztés",
+    "url": "https://nagybalazsweb.com/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://nagybalazsweb.com/og.png"
+    }
+   },
+   "image": "https://nagybalazsweb.com/og.png",
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nagybalazsweb.com/weboldal-meres-suti-nelkul.html"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Tényleg nem kell süti-sáv a süti nélküli méréshez?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ha a mérés valóban nem helyez el semmit a látogató eszközén és nem azonosítja tartósan, akkor nem szükséges hozzájárulást kérni. A tájékoztatóban viszont szerepelnie kell, hogy mit és miért mér."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Elveszítek adatot, ha lemondok a Google Analyticsről?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Elveszíti a napokon átívelő visszatérő-követést és a hirdetési konverziómérést. Az oldalmegtekintést, a forgalmi forrásokat és az eszköztípust ugyanúgy látja."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Search Console-t is le kell cserélni?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nem, azt mindenképp érdemes használni. Nem a látogató gépén mér, hanem a Google oldalán mutatja meg, milyen keresésekre jelenik meg az oldala és hányan kattintanak rá."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+@font-face{font-family:'Poppins';src:url('betu/poppins-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('betu/poppins-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('betu/poppins-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('betu/poppins-700.woff2') format('woff2');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'NB Mono';src:url('betu/mono-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'NB Mono';src:url('betu/mono-700.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#141210;--panel:#1C1917;--panel2:#211D1A;--fg:#EFEAE2;--dim:#8A8078;--dim2:#A79E95;
+  --acc:#C4471F;--acc-lt:#E0682F;--ok:#3F9E6B;--line:rgba(239,234,226,.12);--line2:rgba(239,234,226,.06);
+  --dis:'Poppins','TeX Gyre Adventor','NB Mono',sans-serif;
+  --san:'Poppins','Inter','NB Mono',sans-serif;
+  --mono:'NB Mono','DejaVu Sans Mono',ui-monospace,monospace;
+  --max:1340px;--pad:56px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--san);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+img,svg{max-width:100%;display:block}
+.skip{position:absolute;left:-9999px;top:0;background:var(--acc);color:#fff;padding:12px 20px;z-index:200;font-size:14px}
+.skip:focus{left:12px;top:12px}
+
+.nav{position:sticky;top:0;z-index:60;background:rgba(20,18,16,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line2)}
+.navin{max-width:var(--max);margin:0 auto;padding:14px var(--pad);display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-family:var(--dis);font-size:16px;font-weight:600;letter-spacing:-.02em;text-transform:uppercase;white-space:nowrap;display:inline-flex;align-items:center;min-height:44px}
+.navr{display:flex;align-items:center;gap:22px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.navr a{display:inline-flex;align-items:center;min-height:44px;transition:color .25s}
+.navr a:hover{color:var(--fg)}
+.navr .cta{background:var(--acc);color:#fff;padding:0 20px;min-height:42px;transition:background .25s}
+.navr .cta:hover{background:var(--acc-lt);color:#fff}
+@media(max-width:640px){.navr .hide{display:none}}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.crumb{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);padding:26px 0 0}
+.crumb a{transition:color .25s}
+.crumb a:hover{color:var(--acc)}
+.crumb span{color:var(--dim2)}
+
+.phead{padding:26px 0 34px;border-bottom:1px solid var(--line);margin-bottom:36px}
+.kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin-bottom:16px}
+h1{font-family:var(--dis);font-size:clamp(28px,5vw,54px);font-weight:600;letter-spacing:-.05em;text-transform:uppercase;line-height:1.05;max-width:20ch}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{font-size:16px;line-height:1.85;color:var(--dim2);font-weight:300;max-width:68ch;margin-top:20px}
+.lead b{color:var(--fg);font-weight:500}
+.meta{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:20px;display:flex;gap:22px;flex-wrap:wrap}
+
+.cols{display:grid;grid-template-columns:250px minmax(0,1fr);gap:56px;align-items:start;padding-bottom:20px}
+.toc{position:sticky;top:80px}
+.toc h2{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;font-weight:400}
+.toc a{display:flex;align-items:center;min-height:38px;font-size:13px;line-height:1.5;color:var(--dim2);font-weight:300;transition:color .25s;border-bottom:1px solid var(--line2)}
+.toc a:last-child{border-bottom:none}
+.toc a:hover{color:var(--acc)}
+
+section{padding-bottom:30px;margin-bottom:30px;border-bottom:1px solid var(--line2);scroll-margin-top:80px}
+section:last-of-type{border-bottom:none}
+h2.sh{font-family:var(--dis);font-size:clamp(20px,2.6vw,28px);font-weight:600;letter-spacing:-.04em;text-transform:uppercase;line-height:1.14;margin-bottom:18px}
+h2.sh span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--acc);display:block;margin-bottom:10px;font-weight:400}
+h3{font-family:var(--dis);font-size:16px;font-weight:600;letter-spacing:-.025em;margin:26px 0 10px}
+p{font-size:14.5px;line-height:1.92;color:var(--dim2);font-weight:300;max-width:76ch;margin-bottom:15px}
+p:last-child{margin-bottom:0}
+b,strong{color:var(--fg);font-weight:500}
+main a:not(.b1):not(.b2):not(.logo):not(.cta){color:var(--acc);border-bottom:1px solid rgba(196,71,31,.35)}
+main a:not(.b1):not(.b2):not(.logo):not(.cta):hover{border-bottom-color:var(--acc)}
+ul,ol{margin:12px 0 16px;padding-left:0;list-style:none}
+li{font-size:14.5px;line-height:1.88;color:var(--dim2);font-weight:300;padding-left:22px;position:relative;margin-bottom:10px;max-width:76ch}
+li::before{content:'';position:absolute;left:0;top:12px;width:9px;height:1px;background:var(--acc)}
+ol{counter-reset:sz}
+ol li{counter-increment:sz}
+ol li::before{content:counter(sz) '.';width:auto;height:auto;background:none;top:0;
+  font-family:var(--mono);font-size:11px;color:var(--acc)}
+
+table{width:100%;border-collapse:collapse;border:1px solid var(--line);margin:0;font-size:13.5px;min-width:480px}
+.tw{margin:18px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+th{background:var(--panel);font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--dim);text-align:left;padding:12px 16px;font-weight:400;border-bottom:1px solid var(--line)}
+td{padding:13px 16px;border-bottom:1px solid var(--line2);font-weight:300;color:var(--dim2);vertical-align:top;line-height:1.75}
+tr:last-child td{border-bottom:none}
+td b{color:var(--fg);font-weight:500}
+.box{border:1px solid var(--line);background:var(--panel);padding:24px 26px;margin:20px 0}
+.box.acc{border-color:rgba(196,71,31,.4);background:rgba(196,71,31,.06)}
+.box h3{margin-top:0}
+.q{border-bottom:1px solid var(--line)}
+.q summary{padding:20px 44px 20px 0;font-size:15px;font-weight:400;cursor:pointer;list-style:none;position:relative;min-height:56px;display:flex;align-items:center}
+.q summary::-webkit-details-marker{display:none}
+.q summary::after{content:'';position:absolute;right:8px;top:50%;width:10px;height:10px;margin-top:-7px;
+  border-right:1px solid var(--acc);border-bottom:1px solid var(--acc);transform:rotate(45deg);transition:transform .3s}
+.q[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
+.q summary:hover{color:var(--acc)}
+.q .a{padding:0 44px 22px 0;font-size:14px;line-height:1.9;color:var(--dim2);font-weight:300;max-width:76ch}
+
+.cta2{border:1px solid rgba(196,71,31,.4);background:rgba(196,71,31,.06);padding:32px 30px;margin:34px 0 0;
+  display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center}
+.cta2 h3{font-family:var(--dis);font-size:clamp(19px,2.4vw,26px);font-weight:600;letter-spacing:-.04em;
+  text-transform:uppercase;margin:0 0 8px;line-height:1.1}
+.cta2 p{margin:0;max-width:56ch;font-size:14px}
+.b1{background:var(--fg);color:var(--bg);padding:16px 30px;font-size:14px;font-weight:600;text-align:center;
+  border:1px solid var(--fg);min-height:52px;display:inline-flex;align-items:center;justify-content:center;
+  white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.b1:hover{background:var(--acc);border-color:var(--acc);color:#fff}
+.b2{border:1px solid var(--line);padding:16px 26px;font-size:14px;min-height:52px;display:inline-flex;
+  align-items:center;justify-content:center;transition:border-color .25s,background .25s}
+.b2:hover{border-color:var(--acc);background:rgba(196,71,31,.07)}
+
+.rel{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:20px}
+.rel a{background:var(--bg);padding:22px 22px;display:block;transition:background .3s;border:0!important}
+.rel a:hover{background:var(--panel)}
+.rel .rk{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.rel .rt{font-size:14.5px;font-weight:500;color:var(--fg);line-height:1.45;letter-spacing:-.01em}
+
+footer{border-top:1px solid var(--line);margin-top:56px}
+.fin{max-width:var(--max);margin:0 auto;padding:0 var(--pad) 30px}
+.fcta{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:46px 0 40px}
+.fcta h2{font-family:var(--dis);font-size:clamp(22px,3.2vw,36px);font-weight:600;letter-spacing:-.045em;
+  text-transform:uppercase;line-height:1.06;max-width:17ch}
+.fcta h2 em{font-style:normal;color:var(--acc)}
+.fcta .fact{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.fcta .fline{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end;
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.fcta .fline a{display:inline-flex;align-items:center;min-height:40px;transition:color .25s;border:0!important}
+.fcta .fline a:hover{color:var(--acc)}
+.fgridx{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.fcell{background:var(--bg);padding:30px 26px}
+footer h2.fh{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--acc);margin:0 0 16px;font-weight:400}
+footer nav a,footer .fl{font-size:13px;line-height:1.5;color:var(--dim2);font-weight:300;
+  display:flex;align-items:center;min-height:38px;transition:color .25s;border:0!important}
+footer a:hover{color:var(--acc)}
+.flogo{font-family:var(--dis);font-size:19px;font-weight:600;text-transform:uppercase;letter-spacing:-.03em;
+  color:var(--fg);display:flex;align-items:center;min-height:38px;margin-bottom:6px}
+.ftag{font-size:13px;line-height:1.85;color:var(--dim2);font-weight:300;max-width:34ch}
+.fmeta{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+  margin-top:18px;padding-top:16px;border-top:1px solid var(--line2);line-height:2}
+.fmark{font-family:var(--dis);font-weight:600;font-size:clamp(38px,11.6vw,166px);line-height:1;letter-spacing:-.055em;
+  text-transform:uppercase;-webkit-text-stroke:1.4px rgba(239,234,226,.15);color:transparent;
+  margin:40px 0 -6px;white-space:nowrap;user-select:none}
+.fbot{border-top:1px solid var(--line);margin-top:30px;padding-top:26px;display:flex;justify-content:space-between;
+  gap:14px 26px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase}
+
+.hivo{position:fixed;right:16px;bottom:16px;z-index:58;display:none;gap:10px}
+.hivo a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:var(--acc);color:#fff;box-shadow:0 6px 22px rgba(0,0,0,.45);border:0!important}
+.hivo a.alt{background:var(--panel2);color:var(--fg);border:1px solid var(--line)!important}
+.hivo svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px) and (pointer:coarse){.hivo{display:flex}.fin{padding-bottom:98px}}
+
+@media(max-width:1180px){:root{--pad:44px}}
+@media(max-width:1024px){:root{--pad:32px}
+  .cols{grid-template-columns:minmax(0,1fr);gap:0}
+  .toc{position:static;border:1px solid var(--line);padding:20px 22px;margin-bottom:32px}
+  .fgridx{grid-template-columns:1fr 1fr}
+  .rel{grid-template-columns:1fr}}
+@media(max-width:720px){:root{--pad:24px}
+  .cta2{grid-template-columns:1fr;gap:20px}
+  .cta2 .b1{width:100%}
+  .fgridx{grid-template-columns:1fr}
+  .fcell{padding:26px 22px}
+  .fcta{grid-template-columns:1fr;gap:24px;padding:36px 0 30px}
+  .fcta .fact{align-items:flex-start}
+  .fcta .fline{justify-content:flex-start}
+  .fcta .b1{width:100%}
+  table{min-width:440px;font-size:12.5px}th,td{padding:11px 12px}}
+@media(max-width:480px){:root{--pad:20px}}
+@media print{
+  body{background:#fff;color:#111}
+  .nav,.toc,.skip,.hivo,.cta2,.fcta,.fmark,.rel{display:none}
+  p,li,td{color:#333}h1,h2,h3,b,strong,td b{color:#111}
+  .box,table{background:#fff;border-color:#bbb}
+  section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+<header class="nav">
+  <div class="navin">
+    <a href="index.html" class="logo">Nagy Balázs</a>
+    <nav class="navr" aria-label="Fő menü">
+      <a href="index.html#szolgaltatasok" class="hide">Szolgáltatások</a>
+      <a href="index.html#kalkulator" class="hide">Árkalkulátor</a>
+      <a href="tudasbazis.html">Tudásbázis</a>
+      <a href="index.html#kapcsolat" class="cta">Ajánlatkérés</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <nav class="crumb" aria-label="Morzsamenü">
+    <a href="index.html">Kezdőlap</a> &nbsp;/&nbsp; <span>Tudásbázis</span>
+  </nav>
+  <div class="phead">
+    <div class="kick">Tudásbázis</div>
+    <h1>Hogyan mérd a weboldalad <em>süti nélkül</em>?</h1>
+    <p class="lead">A süti-sáv mindenkit idegesít, a látogatók nagy része pedig elutasítja — így az adat is hiányos lesz. Van másik út: <b>süti nélküli mérés</b>, amihez nem kell hozzájárulás, mert nem tesz semmit a látogató gépére.</p>
+    <div class="meta"><span>Olvasási idő: 6 perc</span><span>Frissítve: 2026. 07. 31.</span><span>Nagy Balázs</span></div>
+  </div>
+  <main id="tartalom">
+    <div class="cols">
+      <nav class="toc" aria-label="Tartalomjegyzék">
+        <h2>Tartalom</h2>
+        <a href="#miert">Miért probléma a süti</a><a href="#hogyan">Hogyan működik süti nélkül</a><a href="#mit">Mit lát és mit nem</a><a href="#valasztas">Melyiket válassza</a><a href="#sajat">Amit én építek</a><a href="#gyik">Gyakori kérdések</a><a href="#tovabb">Kapcsolódó</a>
+      </nav>
+      <div>
+      <section id="miert">
+        <h2 class="sh"><span>01</span>Miért lett probléma a süti</h2>
+        <p>A klasszikus mérőrendszerek — élükön a Google Analytics — sütit tesznek a látogató
+        böngészőjébe, hogy felismerjék, ha visszatér. Ez személyes adatkezelésnek minősül, ezért
+        előzetes, önkéntes hozzájárulás kell hozzá.</p>
+        <p>Innen ered a süti-sáv. Csakhogy a látogatók jelentős része elutasítja vagy egyszerűen
+        bezárja, a modern böngészők pedig egyre agresszívebben törlik a követő sütiket. Az eredmény:
+        a mért adat töredékes, miközben a sáv rontja a látogató élményét.</p>
+        <div class="box acc">
+          <h3>Az őszinte helyzet</h3>
+          <p>A legtöbb kisvállalkozásnak nincs szüksége arra a mélységre, amit a Google Analytics
+          nyújt. Amit tudni akar: hányan jöttek, honnan, mit néztek, és mobilról vagy gépről.
+          Ehhez nem kell süti.</p>
+        </div>
+      </section>
+
+      <section id="hogyan">
+        <h2 class="sh"><span>02</span>Hogyan lehet mérni süti nélkül</h2>
+        <p>Az elv egyszerű: a látogatás tényét rögzítjük, a látogatót viszont nem azonosítjuk
+        tartósan. Az egyedi látogatók becsléséhez a rendszer az IP-címből és a böngésző
+        azonosítójából <b>visszafejthetetlen lenyomatot</b> képez, egy naponta cserélődő, véletlen
+        kiegészítéssel.</p>
+        <p>Ez két dolgot jelent. Egyrészt magát az IP-címet nem kell tárolni. Másrészt a lenyomat
+        éjfélkor érvényét veszti, tehát napokon átívelő követésre alkalmatlan — épp ezért nem
+        minősül tartós azonosításnak.</p>
+        <p>Ilyen elven működnek az ismertebb süti nélküli szolgáltatások, és ugyanezt meg lehet
+        oldani a saját tárhelyen is, külső szolgáltató nélkül.</p>
+      </section>
+
+      <section id="mit">
+        <h2 class="sh"><span>03</span>Mit lát így, és mit nem</h2>
+        <div class="tw"><table>
+          <tr><th></th><th>Süti nélküli mérés</th><th>Google Analytics</th></tr>
+          <tr><td>Oldalmegtekintés, aloldalak</td><td>igen</td><td>igen</td></tr>
+          <tr><td>Honnan érkeztek (forrás)</td><td>igen</td><td>igen</td></tr>
+          <tr><td>Eszköztípus</td><td>igen</td><td>igen</td></tr>
+          <tr><td>Visszatérő látogató napokon át</td><td>nem</td><td>igen</td></tr>
+          <tr><td>Részletes útvonal az oldalon belül</td><td>korlátozottan</td><td>igen</td></tr>
+          <tr><td>Hirdetési konverziókövetés</td><td>nem</td><td>igen</td></tr>
+          <tr><td>Süti-sáv szükséges</td><td>nem</td><td>igen</td></tr>
+        </table></div>
+        <p>A különbség tehát valós, de a legtöbb kisvállalkozásnál olyan funkciókat érint, amiket
+        soha nem használna. Ha viszont fizetett hirdetést futtat, és a konverziókat pontosan
+        vissza kell mérni, ott a klasszikus rendszernek megvan a helye.</p>
+      </section>
+
+      <section id="valasztas">
+        <h2 class="sh"><span>04</span>Melyiket válassza</h2>
+        <ul>
+          <li><b>Süti nélküli mérés</b>, ha kisvállalkozás, nincs nagy hirdetési költése, és
+          egyszerű, tiszta adatkezelést szeretne süti-sáv nélkül.</li>
+          <li><b>Klasszikus mérés</b>, ha rendszeresen hirdet, és a hirdetési költés megtérülését
+          pontosan vissza kell mérnie. Ilyenkor a süti-sáv és a bővebb adatkezelési tájékoztató
+          a belépő.</li>
+          <li><b>Mindkettő</b> ritkán indokolt, és feleslegesen bonyolítja a jogi hátteret.</li>
+        </ul>
+        <p>Bármelyiket választja, a <b>Google Search Console</b> mellé mindenképp javasolt: ingyenes,
+        nem használ sütit a látogatónál, és megmutatja, milyen keresésekre jelenik meg az oldala.
+        Ez az az adat, amiből a legtöbbet lehet tanulni.</p>
+      </section>
+
+      <section id="sajat">
+        <h2 class="sh"><span>05</span>Amit én építek</h2>
+        <p>Az általam készített oldalakhoz alapból egy saját tárhelyen futó, süti nélküli mérést
+        adok. Nem külső szolgáltató: az adat nem hagyja el az Ön tárhelyét, és IP-címet nem tárol.</p>
+        <p>Jelszóval védett felületen látja a napi bontást: oldalmegtekintés, becsült látogatószám,
+        mely aloldalakat nézték, honnan érkeztek, és milyen eszközről. Telefonon is olvasható.</p>
+        <p>Aki a böngészőjében bekapcsolta a „Ne kövessenek" beállítást, azt a rendszer meg sem
+        kísérli mérni.</p>
+      </section>      <section id="gyik">
+        <h2 class="sh"><span>Kérdések</span>Gyakori kérdések</h2>
+        <details class="q"><summary>Tényleg nem kell süti-sáv a süti nélküli méréshez?</summary><div class="a">Ha a mérés valóban nem helyez el semmit a látogató eszközén és nem azonosítja tartósan, akkor nem szükséges hozzájárulást kérni. A tájékoztatóban viszont szerepelnie kell, hogy mit és miért mér.</div></details><details class="q"><summary>Elveszítek adatot, ha lemondok a Google Analyticsről?</summary><div class="a">Elveszíti a napokon átívelő visszatérő-követést és a hirdetési konverziómérést. Az oldalmegtekintést, a forgalmi forrásokat és az eszköztípust ugyanúgy látja.</div></details><details class="q"><summary>A Search Console-t is le kell cserélni?</summary><div class="a">Nem, azt mindenképp érdemes használni. Nem a látogató gépén mér, hanem a Google oldalán mutatja meg, milyen keresésekre jelenik meg az oldala és hányan kattintanak rá.</div></details>
+      </section>
+      <div class="cta2">
+        <div>
+          <h3>Kérdése maradt?</h3>
+          <p>Egy díjmentes, harmincperces beszélgetésben átvesszük a saját helyzetét — és megmondom
+          őszintén, ha szerintem nem éri meg belevágni.</p>
+        </div>
+        <a href="index.html#kapcsolat" class="b1">Beszéljünk</a>
+      </div>
+      <section id="tovabb">
+        <h2 class="sh"><span>Tovább</span>Ez is érdekelheti</h2>
+        <div class="rel"><a href="miert-lassu-a-weboldalad.html"><div class="rk">Tudásbázis</div><div class="rt">Miért lassú a weboldalad?</div></a><a href="webshop-jogi-kotelezettsegek.html"><div class="rk">Tudásbázis</div><div class="rt">Webshop jogi kötelezettségei</div></a><a href="mennyibe-kerul-egy-weboldal.html"><div class="rk">Tudásbázis</div><div class="rt">Mennyibe kerül egy weboldal?</div></a></div>
+      </section>
+      </div>
+    </div>
+  </main>
+</div>
+<footer>
+  <div class="fin">
+    <div class="fcta">
+      <h2>Van egy ötlete? <em>Beszéljük meg.</em></h2>
+      <div class="fact">
+        <a href="index.html#kapcsolat" class="b1">Díjmentes konzultáció</a>
+        <div class="fline">
+          <a href="mailto:bazsinagy0317@gmail.com">bazsinagy0317@gmail.com</a>
+          <a href="tel:+36704164210">+36 70 416 4210</a>
+        </div>
+      </div>
+    </div>
+    <div class="fgridx">
+      <div class="fcell">
+        <span class="flogo">Nagy Balázs</span>
+        <p class="ftag">Egyedi weboldal- és webshopfejlesztés kis- és középvállalkozásoknak.
+        Sablonok és havi platformdíj nélkül.</p>
+        <div class="fmeta">Pécs, Baranya · országosan online<br>Munkanapokon 24 órán belül válaszolok</div>
+      </div>
+      <div class="fcell">
+        <h2 class="fh">Oldalak</h2>
+        <nav aria-label="Lábléc menü">
+          <a href="index.html#szolgaltatasok">Szolgáltatások</a>
+          <a href="index.html#csomagok">Csomagok</a>
+          <a href="index.html#kalkulator">Árkalkulátor</a>
+          <a href="index.html#referencia">Referencia</a>
+          <a href="tudasbazis.html">Tudásbázis</a>
+          <a href="index.html#kapcsolat">Kapcsolat</a>
+        </nav>
+      </div>
+      <div class="fcell">
+        <h2 class="fh">Területek</h2>
+        <nav aria-label="Területek">
+          <a href="weboldal-keszites-pecs.html">Weboldalkészítés Pécs</a>
+          <a href="webshop-keszites-pecs.html">Webshopkészítés Pécs</a>
+          <a href="weboldal-keszites-kaposvar.html">Kaposvár</a>
+          <a href="weboldal-keszites-szekszard.html">Szekszárd</a>
+          <a href="weboldal-keszites-nyiregyhaza.html">Nyíregyháza</a>
+        </nav>
+      </div>
+      <div class="fcell">
+        <h2 class="fh">Cégadatok</h2>
+        <span class="fl">Nagy Balázs e.v.</span>
+        <span class="fl">Adószám: 45734724-1-22</span>
+        <span class="fl">Alanyi adómentes</span>
+        <nav aria-label="Jogi tudnivalók"><a href="adatkezeles.html">Adatkezelés és impresszum</a></nav>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">Nagy Balázs</div>
+    <div class="fbot">
+      <span>© <span id="yr">2026</span> Nagy Balázs — Minden jog fenntartva</span>
+      <span>Ez az oldal is egyedi kód — sablon nélkül</span>
+    </div>
+  </div>
+</footer>
+<div class="hivo" aria-label="Gyors kapcsolat">
+  <a class="alt" href="mailto:bazsinagy0317@gmail.com" aria-label="E-mail írása">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+  </a>
+  <a href="tel:+36704164210" aria-label="Hívás: +36 70 416 4210">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3.5 5.2 2 2 0 0 1 5.5 3z"/></svg>
+  </a>
+</div>
+<script>var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();
+var S='/stat.php';if(S&&navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){try{fetch(S,{method:'POST',
+headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({p:location.pathname||'/',
+r:document.referrer||'',w:innerWidth||0})}).catch(function(){});}catch(e){}}</script>
+</body></html>

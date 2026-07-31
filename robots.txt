@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /adatok/
+Disallow: /statisztika.php
+Disallow: /config.php
 
-Sitemap: https://DOMAIN.HU/sitemap.xml
+Sitemap: https://nagybalazsweb.com/sitemap.xml

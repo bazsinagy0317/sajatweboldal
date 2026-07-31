@@ -14,6 +14,11 @@ ErrorDocument 404 /404.html
     Require all denied
 </FilesMatch>
 
+# ── Az IndexNow kulcsfájl belső másolata nem publikus ──
+<Files "indexnow-kulcs.txt">
+    Require all denied
+</Files>
+
 # ── A gyűjtött statisztika nem érhető el a böngészőből ──
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -41,7 +46,7 @@ ErrorDocument 404 /404.html
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
     AddOutputFilterByType DEFLATE application/javascript application/json
-    AddOutputFilterByType DEFLATE image/svg+xml application/manifest+json
+    AddOutputFilterByType DEFLATE image/svg+xml application/manifest+json application/rss+xml
     # a woff2 már tömörített, nem kell újra
 </IfModule>
 
@@ -57,6 +62,8 @@ ErrorDocument 404 /404.html
     ExpiresByType image/x-icon             "access plus 1 year"
     ExpiresByType application/manifest+json "access plus 1 week"
     ExpiresByType font/woff2               "access plus 1 year"
+    ExpiresByType application/rss+xml      "access plus 1 hour"
+    ExpiresByType application/xml          "access plus 1 hour"
 </IfModule>
 
 # ── Betűtípus MIME-típus (ha a kiszolgáló nem ismerné) ──

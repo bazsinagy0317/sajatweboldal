@@ -11,7 +11,7 @@ return [
     // Feladó cím.
     // Amíg nincs a domain hitelesítve a Resendben, marad az onboarding@resend.dev
     // (ez csak a saját Resend-fiókod e-mail címére tud küldeni — nekünk pont az kell).
-    // Ha a DOMAIN.HU hitelesítve lett: 'noreply@DOMAIN.HU'
+    // Ha a nagybalazsweb.com hitelesítve lett: 'noreply@nagybalazsweb.com'
     'mail_from' => 'onboarding@resend.dev',
 
     // Ide érkeznek az űrlapról jövő üzenetek.

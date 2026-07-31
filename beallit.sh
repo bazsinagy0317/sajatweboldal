@@ -32,8 +32,8 @@ csere() {
   echo "  ✓ $1"
 }
 
-for f in index.html adatkezeles.html 404.html robots.txt sitemap.xml config.php; do
-  [ -f "$f" ] && csere "$f"
+for f in *.html *.xml *.txt config.php; do
+  [ -f "$f" ] && grep -q "DOMAIN\.HU" "$f" && csere "$f"
 done
 
 # ── Székhely és nyilvántartási szám az impresszumba ──
