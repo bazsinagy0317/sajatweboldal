@@ -1,81 +1,78 @@
-# ═══════════════════════════════════════════════
-#  Nagy Balázs — weboldal (MediaCenter tárhely)
-# ═══════════════════════════════════════════════
+# ============================================================
+#  Horse-Play LSE — Apache beállítások (MediaCenter tárhely)
+# ============================================================
 
-Options -Indexes
-DirectoryIndex index.html index.php
+# --- Alapértelmezett kódolás -------------------------------
 AddDefaultCharset UTF-8
 
-# ── Egyedi hibaoldal ──
+# --- Hibaoldalak -------------------------------------------
 ErrorDocument 404 /404.html
 
-# ── Titkos fájlok védelme ──
-<FilesMatch "^(config\.php|\.htaccess|.*\.md|.*\.log|.*\.sh)$">
-    Require all denied
-</FilesMatch>
-
-# ── Az IndexNow kulcsfájl belső másolata nem publikus ──
-<Files "indexnow-kulcs.txt">
-    Require all denied
-</Files>
-
-# ── A gyűjtött statisztika nem érhető el a böngészőből ──
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteRule ^adatok/ - [F,L]
-</IfModule>
+# --- Könyvtárlistázás tiltása ------------------------------
+Options -Indexes
 
 <IfModule mod_rewrite.c>
-    RewriteEngine On
+  RewriteEngine On
 
-    # ── HTTPS kényszerítése ──
-    RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP:X-Forwarded-Proto} !https
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  # HTTPS kikényszerítése
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-    # ── www eltávolítása (egységes cím a keresőknek) ──
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+  # www nélküli változat -> www (ha fordítva kell, cseréld meg a két blokkot)
+  RewriteCond %{HTTP_HOST} ^horse-play\.hu$ [NC]
+  RewriteRule ^(.*)$ https://www.horse-play.hu/$1 [R=301,L]
 
-    # ── index.html elrejtése a címsorból ──
-    RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
-    RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+  # index.html elrejtése a címsorból
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
 </IfModule>
 
-# ── Tömörítés ──
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
-    AddOutputFilterByType DEFLATE application/javascript application/json
-    AddOutputFilterByType DEFLATE image/svg+xml application/manifest+json application/rss+xml
-    # a woff2 már tömörített, nem kell újra
-</IfModule>
-
-# ── Böngésző-gyorsítótár ──
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType text/html                "access plus 1 hour"
-    ExpiresByType text/css                 "access plus 1 year"
-    ExpiresByType application/javascript   "access plus 1 year"
-    ExpiresByType image/png                "access plus 1 year"
-    ExpiresByType image/jpeg               "access plus 1 year"
-    ExpiresByType image/svg+xml            "access plus 1 year"
-    ExpiresByType image/x-icon             "access plus 1 year"
-    ExpiresByType application/manifest+json "access plus 1 week"
-    ExpiresByType font/woff2               "access plus 1 year"
-    ExpiresByType application/rss+xml      "access plus 1 hour"
-    ExpiresByType application/xml          "access plus 1 hour"
-</IfModule>
-
-# ── Betűtípus MIME-típus (ha a kiszolgáló nem ismerné) ──
-<IfModule mod_mime.c>
-    AddType font/woff2 .woff2
-</IfModule>
-
-# ── Biztonsági fejlécek ──
+# --- Biztonsági fejlécek -----------------------------------
 <IfModule mod_headers.c>
-    Header always set X-Content-Type-Options "nosniff"
-    Header always set X-Frame-Options "SAMEORIGIN"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
-    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  # Csak a Google Térkép engedélyezett külső forrásként (hozzájárulás után)
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://maps.google.com; frame-src https://www.google.com https://maps.google.com; script-src 'self'; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  # A betűtípusok CORS-engedélye
+  <FilesMatch "\.(woff|woff2|ttf)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
 </IfModule>
+
+# --- Tömörítés ---------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE image/svg+xml application/json
+</IfModule>
+
+# --- Böngészőoldali gyorsítótár ----------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                 "access plus 0 seconds"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 6 months"
+  ExpiresByType image/png                 "access plus 6 months"
+  ExpiresByType image/webp                "access plus 6 months"
+  ExpiresByType image/svg+xml             "access plus 6 months"
+  ExpiresByType font/woff                 "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+</IfModule>
+
+# --- MIME-típusok ------------------------------------------
+<IfModule mod_mime.c>
+  AddType font/woff  .woff
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+</IfModule>
+
+# --- Rejtett fájlok védelme --------------------------------
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

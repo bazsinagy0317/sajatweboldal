@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /adatok/
-Disallow: /statisztika.php
-Disallow: /config.php
+Disallow: /404.html
 
-Sitemap: https://nagybalazsweb.com/sitemap.xml
+Sitemap: https://www.horse-play.hu/sitemap.xml
