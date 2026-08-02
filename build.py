@@ -91,8 +91,8 @@ def layout(slug, title, desc, body, jsonld="", crumb=None, head_extra=""):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/favicon.svg">
-<link rel="preload" href="assets/fonts/lora-600.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="assets/fonts/poppins-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-600.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/jakarta-var.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 {head_extra}{jsonld}
 </head>
